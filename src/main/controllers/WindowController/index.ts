@@ -14,21 +14,20 @@ class WindowController {
     });
   }
 
-  listenToHideApp(){
+  listenToHideApp() {
     ipcMain.on(WindowEventsEnum.TOGGLE_HIDED, () => {
       this.window.minimize();
     });
   }
 
-  listenToMaximize(){
+  listenToMaximize() {
     ipcMain.on(WindowEventsEnum.TOGGLE_MAXIMIZE, () => {
-      if (this.window.isMaximized()){
+      if (this.window.isMaximized()) {
         this.window.unmaximize();
-      }
-      else {
+      } else {
         this.window.maximize();
       }
-    })
+    });
   }
 }
 

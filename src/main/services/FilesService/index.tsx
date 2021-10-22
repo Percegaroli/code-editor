@@ -1,6 +1,6 @@
 /* eslint-disable class-methods-use-this */
 import { readdir, readFile, writeFile, open } from 'fs/promises';
-import path from 'path/posix';
+import path from 'path';
 import { SavingFileData } from 'shared/Model/SavingFileData';
 import { Folder } from 'shared/Model/Folder';
 import DialogService from '../DialogService';
